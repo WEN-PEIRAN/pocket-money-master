@@ -1,16 +1,9 @@
-POCKET MONEY MASTER — VERSION 1.8
+POCKET MONEY MASTER — VERSION 1.9
 
-Startup fix
-- index.html and app.js now use exactly matching IDs: subtitle, topimg and modalbody.
-- Date helpers are declared before stored-data migration runs.
-- App startup waits for DOMContentLoaded before finding page elements.
-- Header updates are null-safe.
-- Bottom navigation uses delegated click handling.
-- A visible Startup Error panel is shown if required page containers are missing.
-
-Retained
-- V1.7 Savings, Term Deposit and Investment financial engine.
-- V1.6 Delete Profile and Parent PIN controls.
-- V1.5 spacing, money symbols and card thumbnails.
-- V1.4 hover/press animation and transparent branding.
-- Existing pmm-v1-data localStorage compatibility.
+- Money fields now start empty and show 0.00 only as a placeholder.
+- Money fields use text + inputmode="decimal" to request the iOS decimal keyboard and remove browser number spinners.
+- Input cleaning permits digits, one decimal point and no more than two decimal places.
+- The inner input focus outline is removed; one focus ring now surrounds the complete $ field.
+- Added 8 px spacing between the dollar symbol and the entered amount.
+- Added 18 px below account action buttons before the Balance History panel.
+- Existing pmm-v1-data storage compatibility and account functionality are retained.
