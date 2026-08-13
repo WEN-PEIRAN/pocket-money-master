@@ -1,15 +1,22 @@
-POCKET MONEY MASTER — VERSION 2.3
+POCKET MONEY MASTER — VERSION 2.4
 
-Restored Child financial engine
-- Savings: initial transfer, adjustable 0–5% p.a. rate, daily accrual, monthly interest credit, rate change, details and history chart.
-- Term Deposit: 1 month/3%, 3 months/4%, 6 months/5%, 12 months/8%; principal, maturity, accrued interest, maturity credit and early closure with interest forfeiture.
-- Investment: Government Bonds, Diversified Fund, Property Fund and Share Market; daily simulated movement, risk details, transaction records and inactive/bankrupt state.
-- Active Term Deposits and inactive investments cannot receive ordinary transfers.
-- Restored Account Details, Close Account, Savings Rate and three-month Balance History.
-- Restored Child Summary: Received, Spent, Interest, Investment Gains/Losses, Saved Into Savings/Term and Combined Balance.
+PIN changes
+- Adult Profile PIN is now 4–6 digits only.
+- Child Parent PIN is now 4–6 digits only.
+- Child avatar changes and transfers between existing accounts do not require PIN.
+- Child spending records do not require PIN.
+- PIN is required for Add Money, account creation, savings-rate changes, account closure and Child Profile deletion.
 
-Retained
-- V2.2 avatars, card artwork, card selector and carousel.
-- Adult profile, Chinese adult UI, password unlock, records and analysis.
-- V2.1 navigation images and consistent Settings controls.
-- V1.9 money-input behaviour and pmm-v1-data compatibility.
+Navigation fix
+- The Back button on a specific Child account now returns to the Child Accounts carousel, not Profile Selection.
+
+Share Market simulation
+- Simulated market session: weekdays, 3:00 pm–6:00 pm Australia/Brisbane time.
+- Update interval: one stored movement for each completed 10-minute slot.
+- App checks every 30 seconds while open and catches up unprocessed valid slots when reopened.
+- Uses small normally distributed movements with infrequent larger shocks.
+- Compounds from the latest balance.
+- Daily safety cap: +20% / -20% from the day's opening balance.
+- Reaching the cap freezes further changes until the next simulated market day.
+- Weekends and out-of-session times are frozen.
+- Existing non-share investments keep their original daily simulation rules.
