@@ -1,8 +1,11 @@
-V2.10 RELEASE CHECKS
+POCKET MONEY MASTER V2.11 RELEASE CHECKS
 - No patch files.
-- JavaScript syntax checked.
-- Horizontal swipe opens the front card.
-- Vertical swipe browses cards.
-- Rear-card selection moves it to front.
-- Profile name removed from card templates.
-- All 29 PNG assets included.
+- JavaScript syntax parses successfully.
+- Account cards use a real gold chip button.
+- Front chip opens items[index].id directly.
+- Rear chip buttons are disabled.
+- Add Account uses a separate Create Account button.
+- Vertical Wallet browsing remains.
+- Horizontal swipe-to-open is removed.
+- Profile holder names remain absent.
+- All 29 PNG assets are included.

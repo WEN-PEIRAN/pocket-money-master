@@ -1,9 +1,16 @@
-POCKET MONEY MASTER — VERSION 2.10
+POCKET MONEY MASTER — VERSION 2.11
 
-- Swipe up/down to browse cards.
-- A short press on a rear card moves it to the front.
-- Swipe the front card left/right by at least 55 px to open it.
-- Swipe the front Add Account card left/right to create an account.
-- Mobile uses native Touch Events.
-- Profile/user names are removed from bank cards.
-- All V2.9 financial, navigation, PIN, Summary, Activity, backup and Share Market functions are retained.
+Wallet interaction
+- Swipe up or down to browse cards.
+- Select a rear card to move it to the front.
+- Select the gold chip on the front card to open that account.
+- The chip is a real button linked directly to the account item ID.
+- Rear-card chips are disabled to prevent accidental opening.
+- Add Account uses a separate Create Account button on the front card.
+- Horizontal swipe-to-open has been removed.
+
+Card design
+- Profile/user names remain removed from bank cards.
+- Balance, account type, gold chip, account name and artwork remain.
+
+All V2.10 financial, navigation, PIN, Summary, Activity, backup and Share Market functions are retained.
