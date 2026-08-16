@@ -1,0 +1,19 @@
+V2.8 RELEASE CHECKS
+
+Static checks
+- JavaScript syntax parses successfully.
+- All 29 image assets are present.
+- Root files and manifest image references are present.
+
+Interaction paths reviewed
+- Profile open and Profile Back.
+- Wallet tap, swipe up, swipe down and Add Account card.
+- Header Add and header Settings.
+- Bottom Accounts, Activity, Summary and Settings navigation.
+- Transaction Add, Spend, Transfer and Details.
+- Savings Transfer, Rate, Details and Close.
+- Term Deposit Details and close flow.
+- Investment details, legacy repair and close flow.
+- Share Buy, Sell, Details and market status.
+- Parent PIN success, wrong PIN and cancellation.
+- Backup export and protected restore.
