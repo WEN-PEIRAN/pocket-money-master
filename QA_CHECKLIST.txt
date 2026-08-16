@@ -1,19 +1,23 @@
-V2.8 RELEASE CHECKS
+POCKET MONEY MASTER V2.9 RELEASE CHECKS
 
-Static checks
+Code and package
+- Main app.js contains the Wallet fix; no patch JavaScript or CSS files are used.
 - JavaScript syntax parses successfully.
-- All 29 image assets are present.
-- Root files and manifest image references are present.
+- Root file references and manifest icon paths are valid.
+- All 29 PNG image resources are included.
 
-Interaction paths reviewed
-- Profile open and Profile Back.
-- Wallet tap, swipe up, swipe down and Add Account card.
-- Header Add and header Settings.
+Wallet interaction paths
+- Tap a rear card: moves to front only.
+- Tap the front account card: opens the correct account.
+- Tap the rear Add Account card: moves to front only.
+- Tap the front Add Account card: opens Parent PIN approval.
+- Swipe up/down: moves one card and does not open an account.
+- Pointer cancellation clears the gesture state.
+- Keyboard arrows browse; Enter/Space opens the front card.
+
+Retained paths
+- Header Add and Settings actions.
 - Bottom Accounts, Activity, Summary and Settings navigation.
-- Transaction Add, Spend, Transfer and Details.
-- Savings Transfer, Rate, Details and Close.
-- Term Deposit Details and close flow.
-- Investment details, legacy repair and close flow.
-- Share Buy, Sell, Details and market status.
+- Account Add, Spend, Transfer, Details, Rate, Buy Shares and Sell Shares.
 - Parent PIN success, wrong PIN and cancellation.
 - Backup export and protected restore.
