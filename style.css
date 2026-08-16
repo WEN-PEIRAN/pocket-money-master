@@ -17,3 +17,12 @@
 
 /* V2.11 chip-to-open interaction */
 .wallet-card{cursor:pointer}.wallet-card .cardchip{appearance:none;-webkit-appearance:none;display:block;width:42px;height:30px;min-width:42px;min-height:30px;padding:0;border:0;border-radius:8px;background:linear-gradient(135deg,#fff0a8 0%,#e7bd50 42%,#bf8d24 100%);box-shadow:inset 0 1px 1px rgba(255,255,255,.65),0 2px 5px rgba(20,31,50,.24);margin:19px 0 8px;position:relative;overflow:visible;touch-action:manipulation}.wallet-card .cardchip::after{content:"";position:absolute;inset:-9px}.wallet-card.is-front .cardchip{cursor:pointer;box-shadow:inset 0 1px 1px rgba(255,255,255,.76),0 0 0 3px rgba(255,214,81,.28),0 4px 9px rgba(20,31,50,.3)}.wallet-card .cardchip:disabled{cursor:default;opacity:.78}.create-account-control{margin-top:12px;padding:11px 17px;border:1px solid rgba(124,230,255,.72);border-radius:999px;background:linear-gradient(145deg,#1e8aff,#25c7df);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(2,29,66,.3);touch-action:manipulation}.create-account-control:disabled{opacity:.48}.wallet-card .holder,.bankcard .holder{display:none!important}
+
+/* V2.11 final event-routing correction */
+.wallet-card::after{pointer-events:none}
+.wallet-card>*{pointer-events:none}
+.wallet-card:not(.is-front) .cardchip{pointer-events:none!important}
+.wallet-card.is-front .cardchip{pointer-events:auto!important;z-index:20;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,215,90,.22)}
+.wallet-card.is-front .cardchip::after{pointer-events:none}
+.wallet-add.is-front .create-account-control{pointer-events:auto!important;z-index:20}
+.wallet-card.is-front .cardchip:focus-visible{outline:3px solid rgba(255,226,115,.78);outline-offset:4px}
