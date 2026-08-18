@@ -1,8 +1,8 @@
-POCKET MONEY MASTER V2.13 RELEASE CHECKS
-- Based on the confirmed working V2.5 account-opening implementation.
-- Exact data-a and per-card onclick path retained.
-- Vertical single-column card list retained.
-- Add Account direct handler retained.
-- Browser title, main screen and manifest include V2.13.
+V2.14 RELEASE CHECKS
+- V2.5 data-a direct onclick retained.
+- Only the front card accepts pointer events.
+- Vertical touch swipe changes selected card.
+- Short taps are not prevented, allowing native click.
+- Swipe click suppression included.
 - JavaScript syntax checked.
 - All 29 PNG assets included.
