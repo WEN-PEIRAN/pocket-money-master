@@ -1,8 +1,6 @@
-V2.14 RELEASE CHECKS
-- V2.5 data-a direct onclick retained.
-- Only the front card accepts pointer events.
-- Vertical touch swipe changes selected card.
-- Short taps are not prevented, allowing native click.
-- Swipe click suppression included.
+V3.0 NO-IMAGES PACKAGE CHECKS
 - JavaScript syntax checked.
-- All 29 PNG assets included.
+- V2.14 stack/open logic retained.
+- Splash timeout is 2000 ms.
+- Eight avatar names and eleven card filenames mapped.
+- Empty img subfolders included.

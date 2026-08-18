@@ -1,10 +1,5 @@
-POCKET MONEY MASTER — VERSION 2.14
+POCKET MONEY MASTER — VERSION 3.0 NO-IMAGES PACKAGE
 
-- Built from the confirmed working V2.5/V2.13 direct account-opening path.
-- Cards are visually stacked for mobile use.
-- Swipe up/down on the stack to change the top card.
-- Tap the top card to open it using its direct data-a onclick handler.
-- Lower cards have pointer events disabled and cannot open.
-- Swipe-generated clicks are briefly suppressed.
-- Add Account participates as the final stack card.
-- Main page, browser title and manifest show V2.14.
+Copy your complete image folders into img/: avatars, branding, buttons, cards and nav. Keep every filename unchanged.
+
+V3.0 includes the supplied avatar/card registries, type-specific default card designs, Avatar fallback, Add Account artwork mapping, V2.14 interaction logic, and a 2-second splash showing Version 3.0.
