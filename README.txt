@@ -1,16 +1,15 @@
-POCKET MONEY MASTER — VERSION 2.11
+POCKET MONEY MASTER — VERSION 2.13
 
-Wallet interaction
-- Swipe up or down to browse cards.
-- Select a rear card to move it to the front.
-- Select the gold chip on the front card to open that account.
-- The chip is a real button linked directly to the account item ID.
-- Rear-card chips are disabled to prevent accidental opening.
-- Add Account uses a separate Create Account button on the front card.
-- Horizontal swipe-to-open has been removed.
+Account opening
+- Built from the last confirmed working V2.5 account-page logic.
+- Account cards use the original data-a attribute.
+- Each card receives its own direct onclick handler: childAccount(x.dataset.a).
+- Accounts are displayed vertically in one column.
+- Select anywhere on a card to open it.
+- Add Account keeps the original direct addA onclick path.
 
-Card design
-- Profile/user names remain removed from bank cards.
-- Balance, account type, gold chip, account name and artwork remain.
-
-All V2.10 financial, navigation, PIN, Summary, Activity, backup and Share Market functions are retained.
+Branding
+- The main profile screen displays Pocket Money Master V2.13.
+- The browser/bookmark title is Pocket Money Master V2.13.
+- The web app manifest name and short name include V2.13.
+- Main files are in the project root; images remain in img/.
