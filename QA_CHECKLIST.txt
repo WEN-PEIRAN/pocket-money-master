@@ -1,11 +1,11 @@
-V3.3 CHECKS
+V3.2 CHECKS
 - JavaScript syntax checked.
-- Empty image folders included.
-- Header avatar uses the selected child profile image.
-- Accounts page is fixed to the viewport; card stack swipe remains active.
-- News filters removed; four latest reports shown directly.
-- Each report opens a full story.
-- New Investment, Savings or Term account can select an eligible funding account.
-- Savings has Parent PIN-protected Add Money and no Spend action.
+- Existing storage key retained for V3.0/V3.1 data.
 - Nine avatars registered, including ice-assassin.
-- Existing pmm-v1-data storage key retained.
+- Header shows the current child profile avatar and updates after selection.
+- News direction labels removed; Risk Level retained.
+- Target Change uses a -50% to +50% slider with live value and recommended range.
+- Double-tap, pinch and gesture zoom blocked in normal mobile browser use.
+- Account stack uses touch-action:none to prevent page movement while swiping.
+- News, Summary and Settings remain vertically scrollable.
+- Image folders are placeholders only; no images are included.
