@@ -1,11 +1,11 @@
-V3.1 CHECKS
+V3.2 CHECKS
 - JavaScript syntax checked.
-- V3.0 storage key retained.
-- Existing image paths retained; News maps to img/nav/nav-news.png.
-- PIN required for hidden Version 3.1 control.
-- 7, 14, 28 and custom scenario lengths.
-- Hold Steady, Keep This Trend and Choose a Random Scenario.
-- Loss protection: 50% default, 75%, custom or off.
-- News content stored in news-data.js.
-- Share Market daily settlement replaces visible ten-minute items.
-- Summary combines investment result and shows allocation bars.
+- Existing storage key retained for V3.0/V3.1 data.
+- Nine avatars registered, including ice-assassin.
+- Header shows the current child profile avatar and updates after selection.
+- News direction labels removed; Risk Level retained.
+- Target Change uses a -50% to +50% slider with live value and recommended range.
+- Double-tap, pinch and gesture zoom blocked in normal mobile browser use.
+- Account stack uses touch-action:none to prevent page movement while swiping.
+- News, Summary and Settings remain vertically scrollable.
+- Image folders are placeholders only; no images are included.
