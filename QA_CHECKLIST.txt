@@ -1,11 +1,12 @@
-V3.2 CHECKS
-- JavaScript syntax checked.
-- Existing storage key retained for V3.0/V3.1 data.
-- Nine avatars registered, including ice-assassin.
-- Header shows the current child profile avatar and updates after selection.
-- News direction labels removed; Risk Level retained.
-- Target Change uses a -50% to +50% slider with live value and recommended range.
-- Double-tap, pinch and gesture zoom blocked in normal mobile browser use.
-- Account stack uses touch-action:none to prevent page movement while swiping.
-- News, Summary and Settings remain vertically scrollable.
-- Image folders are placeholders only; no images are included.
+V3.3 STABLE ARCHITECTURE CHECKS
+- app.js and news-data.js syntax checked.
+- index.html loads only news-data.js and app.js.
+- News list and full-story object destructuring corrected.
+- V3.2 Summary design restored.
+- Dedicated header avatar container added and refreshed on every render.
+- Child Parent PIN change updates pinHash, not adult passwordHash.
+- Accounts page viewport lock retained.
+- Investment funding source and Savings Add Money retained.
+- Nine avatars retained, including ice-assassin.
+- Existing pmm-v1-data storage key retained.
+- Empty image folders included; no images packaged.
