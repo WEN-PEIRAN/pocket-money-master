@@ -12,3 +12,4 @@ V4.0 CHECKS
 - Accounts page fixed lock removed; normal page scroll restored.
 - Header avatar, Savings funding, Savings Add Money, Summary and zoom protection retained.
 - Empty image folders included; no images packaged.
+- Profile selection page title and version badge explicitly checked as V4.0.
