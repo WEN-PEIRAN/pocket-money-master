@@ -1,4 +1,3 @@
-POCKET MONEY MASTER - VERSION 3.2 NO-IMAGES PACKAGE
-Copy the complete original images into img/avatars, branding, buttons, cards and nav. Keep all filenames unchanged.
-Required new files: img/nav/nav-news.png and img/avatars/avatar-ice-assassin.png.
-V3.2 removes direction labels from News, adds a -50% to +50% target slider, displays the current profile avatar in the header, registers nine avatars, blocks browser zoom gestures, and locks page movement while swiping the account stack. V3.1 scenarios, loss protection, daily Share Market settlement and Summary improvements are included.
+POCKET MONEY MASTER - VERSION 3.3 NO-IMAGES PACKAGE
+Copy all original images into img/avatars, branding, buttons, cards and nav without changing filenames. Include nav-news.png and avatar-ice-assassin.png.
+V3.3 fixes the header avatar, locks the Accounts page, removes News filters, adds clickable full fictional reports, allows new accounts to use Savings as the funding source, and adds Parent PIN-protected Add Money to Savings. V3.2 scenario controls and touch protections are retained.
