@@ -1,12 +1,14 @@
-V3.3 STABLE ARCHITECTURE CHECKS
+V4.0 CHECKS
 - app.js and news-data.js syntax checked.
 - index.html loads only news-data.js and app.js.
-- News list and full-story object destructuring corrected.
-- V3.2 Summary design restored.
-- Dedicated header avatar container added and refreshed on every render.
-- Child Parent PIN change updates pinHash, not adult passwordHash.
-- Accounts page viewport lock retained.
-- Investment funding source and Savings Add Money retained.
-- Nine avatars retained, including ice-assassin.
-- Existing pmm-v1-data storage key retained.
+- Four profile markets exist without investment accounts.
+- New profiles receive controlled random market scenarios.
+- Parent Market Control works before accounts exist.
+- News reads profile markets, not account existence.
+- Same market rate is shared by same-type investment accounts.
+- New investment accounts do not receive earlier market gains/losses.
+- Existing scenarios migrate into profile markets where available.
+- Term Deposit preview and early-close adjustment included.
+- Accounts page fixed lock removed; normal page scroll restored.
+- Header avatar, Savings funding, Savings Add Money, Summary and zoom protection retained.
 - Empty image folders included; no images packaged.

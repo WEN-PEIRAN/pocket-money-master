@@ -1,5 +1,7 @@
-POCKET MONEY MASTER - VERSION 3.3 - STABLE ARCHITECTURE
+POCKET MONEY MASTER - VERSION 4.0 - NO IMAGES
 
-This rebuild uses a stable architecture: app.js contains the complete application logic, while news-data.js contains only editable fictional news content. No v31.js, v32.js or v33.js runtime patch files are used.
+V4.0 uses a profile-level market system. Government Bonds, Diversified Fund, Property Fund and Share Market run before investment accounts are opened. News and Parent Market Control read the same market scenarios. New investment accounts join the current market without receiving past gains or losses.
 
-Copy all original image files into img/avatars, img/branding, img/buttons, img/cards and img/nav. Keep every filename unchanged. Include nav-news.png and avatar-ice-assassin.png.
+Term Deposit creation now previews estimated interest, maturity total and maturity date. Early closure shows the interest adjustment and returned amount.
+
+The Accounts page uses normal vertical scrolling again while retaining account-card swiping. Copy all original images into the empty img subfolders and keep every filename unchanged.
