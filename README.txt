@@ -1,7 +1,7 @@
-POCKET MONEY MASTER - VERSION 4.1 - NO IMAGES
+POCKET MONEY MASTER - VERSION 4.2 - NO IMAGES
 
-V4.1 restores the Share Market experience and Summary allocation view. Share Market movement is processed every 10 minutes during the simulated weekday session, stored as a live trend, and displayed with recent ten-minute rates. Recent Transactions receives one Share Market Daily Settlement after market close. Small sub-cent movements are carried forward instead of being discarded.
+V4.2 replaces the fixed Share Market ten-minute percentage with a varied intraday plan. Each market day still follows the scenario’s overall daily direction, but individual ten-minute movements can be larger, smaller or briefly move in the opposite direction. Volatility controls how uneven those movements are.
 
-Summary again shows Net Investment Result and percentage allocation bars for Spending Money, Savings, Term Deposits and Investments.
+Share Market news now has five hidden categories: Small Rise, Large Rise, Stable, Small Fall and Large Fall. Each category contains eight fictional stories. A scenario change publishes a new story immediately. If the market category is unchanged, a different story is published every two days. The displayed date is the actual story publication date and remains unchanged between story updates.
 
-Copy all original images into the empty img subfolders without changing filenames.
+Copy all original images into the empty img folders without changing filenames.

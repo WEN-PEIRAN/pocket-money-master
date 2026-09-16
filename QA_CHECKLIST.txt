@@ -1,12 +1,14 @@
-V4.1 CHECKS
+V4.2 CHECKS
 - app.js and news-data.js syntax checked.
-- Version labels updated to V4.1.
-- Ten-minute Share Market points stored in profile market data.
-- Live trend chart and recent update list included on Share Market account screen.
-- Sub-cent share changes carried forward until they affect the account balance.
-- One Share Market Daily Settlement generated after market close or day rollover.
-- Buy and Sell records remain separate.
-- Summary Net Investment Result restored.
-- Summary percentage allocation bars restored.
-- V4.0 profile-level markets, News, Term Deposit preview, Savings funding and Parent Market Control retained.
+- Version labels updated to V4.2.
+- Ten-minute Share Market rates are no longer dailyRate divided equally by 18.
+- A daily slot plan contains 18 varied rates whose total matches the daily target rate.
+- Low, Medium and High volatility change the intraday variation.
+- Share Market news has five hidden trend categories.
+- Eight stories exist in each Share Market category.
+- Scenario change refreshes the Share Market story immediately.
+- Unchanged Share Market category refreshes every two days.
+- News publication date is stored and displayed instead of always using today.
+- Recent story history reduces immediate repetition.
+- V4.1 live trend, daily settlement and Summary allocation bars retained.
 - Empty image folders included; no images packaged.
