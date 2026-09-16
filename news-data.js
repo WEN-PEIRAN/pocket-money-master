@@ -1,58 +1,353 @@
 'use strict';
-/* Pocket Money Master V4.2 fictional news library. Edit stories here. */
-const PMM_NEWS_DATA={
- disclaimer:'Simulation News: The companies and events in these reports are fictional and created for this game.',
- bonds:{label:'Government Bonds',risk:'Low'},fund:{label:'Diversified Fund',risk:'Medium'},property:{label:'Property Fund',risk:'Medium'},shares:{label:'Share Market',risk:'High'},
- shareStories:{
-  smallRise:[
-   ['BrightBot AI Adds New School Customers','BrightBot AI has signed a small group of new schools. Sales are improving, but the company still needs to control factory costs.','BrightBot AI makes learning robots for schools. This week, twelve more schools agreed to buy the latest model. The order is not huge, but it is larger than last month.','The company will add one extra production team instead of opening a new factory. This keeps costs lower while sales slowly grow.','Investors are taking more interest in technology shares. However, one small order is not enough to promise long-term success.','Would you invest now, or wait for another sales report?'],
-   ['PixelForge Game Sales Beat a Quiet Forecast','PixelForge Games sold slightly more copies than expected after a new classroom game update.','The company added creative building tools and safer online play to its popular game. Families responded well, and weekly sales moved above the company forecast.','PixelForge has not announced a major new game, so the improvement may remain modest. Advertising costs also increased this month.','Some investors see steady progress, while others are waiting for a larger release.','Can a useful update create lasting growth?'],
-   ['SunSpark Wins a Local Battery Deal','SunSpark Energy will provide batteries for a new community centre project.','The contract is smaller than the company’s biggest projects, but it gives SunSpark reliable work for the next few months.','Engineers say the batteries performed well in recent tests. Material prices are still high, which may limit profit.','Clean-energy shares received a little more attention after the announcement.','Does one local contract make the company less risky?'],
-   ['WonderSnack Opens Three New Shops','WonderSnack Foods has opened three small shops after a successful trial.','The trial shops sold more healthy snacks than expected. The company chose busy shopping areas for the new stores.','Rent and worker costs are higher in these locations, so profit may grow slowly. Investors are watching the first month of sales.','The news gives the market a gentle positive signal.','Which matters more: more shops or higher costs?'],
-   ['NovaMind AI Reports Steady Subscription Growth','More families are paying for NovaMind AI’s homework support service.','Subscriptions rose for a third month, but the increase was not dramatic. The company says users like its new reading tool.','NovaMind must continue spending money on safety checks and better answers. Investors are pleased but careful.','Technology shares may receive mild support from the report.','Would steady growth be enough for your investment?'],
-   ['SwiftStep Shoes Receives Good Early Reviews','A new SwiftStep school shoe is receiving positive reviews from families.','The shoe uses a stronger sole and a washable outer layer. Early sales are above the company’s cautious target.','SwiftStep has only released the shoe in two cities. A wider launch could help, but it would also cost more.','Investors see a possible small improvement in future sales.','Would you wait for the national launch?'],
-   ['CloudQuest Adds New Players','CloudQuest Interactive has gained new players after improving its family game service.','The company fixed several connection problems and added new cooperative challenges. Player numbers rose slowly during the week.','The service still faces strong competition from larger game companies. Investors are watching whether players stay.','The update may provide a small lift to share interest.','Are new players valuable if they leave quickly?'],
-   ['GreenGrid Cuts Some Energy Costs','GreenGrid Power has reduced costs at two solar sites.','New software now helps the company store and use power more efficiently. The saving is useful, but it only covers part of GreenGrid’s business.','Investors welcomed the improvement while waiting for results from other sites.','The market may respond positively, but probably not dramatically.','How could lower costs help a company grow?']
-  ],
-  largeRise:[
-   ['BrightBot AI Receives Its Largest School Order','BrightBot AI has received an order for 5,000 learning robots and plans a major expansion.','A large group of schools chose BrightBot’s newest robot for maths, spelling and coding lessons. The order is far bigger than the company expected.','BrightBot plans to hire more workers and open a second factory. Investors believe the deal could strongly increase future sales.','The expansion will cost a lot, and late deliveries could damage the company. Even so, the confirmed order has created major market interest.','Would you invest before the first robots are delivered?'],
-   ['PixelForge Game Becomes a Worldwide Hit','PixelForge Games has reported record sales for its new adventure game.','The game reached the top sales list in several countries during its first week. Millions of players have downloaded it.','The company expects much higher income and has increased its yearly forecast. Investors rushed to watch gaming shares.','A popular game can lose players quickly, so the company must keep adding quality content.','Can one hit game support a company for a long time?'],
-   ['SunSpark Announces a Battery Breakthrough','SunSpark Energy says its new battery lasts much longer and passed major safety tests.','Independent testing showed that the battery stores more power than the company’s older model. Several transport companies have requested samples.','A successful large-scale launch could create important new sales. Clean-energy investors reacted strongly to the test results.','The battery is not yet being produced in large numbers, so manufacturing problems remain possible.','Would you invest before mass production begins?'],
-   ['NovaMind AI Signs a Major Education Contract','NovaMind AI will provide learning software to hundreds of schools.','The three-year agreement is the company’s largest contract. It includes reading, language and study-support tools.','The contract gives NovaMind regular income and may attract more school systems. Technology investors see strong growth potential.','The company must protect student data and deliver reliable results to keep the agreement.','How important is one large customer?'],
-   ['GreenGrid Wins a National Solar Project','GreenGrid Power will build solar systems across a large group of public buildings.','The confirmed project includes hospitals, libraries and community centres. Work will continue for several years.','The size and length of the contract could greatly increase GreenGrid’s income. Energy shares gained strong attention.','Construction delays and material shortages could still reduce profit.','Would a long contract make an investment safer?'],
-   ['SwiftStep Shoes Sells Out a New Product','SwiftStep’s new sports shoe sold out in many stores during its launch weekend.','Retailers placed urgent new orders after strong customer demand. The company is increasing production at two factories.','Investors expect a large rise in sales if demand continues. Consumer-product shares moved into focus.','Fast production may create quality problems if the company is not careful.','Could very strong demand also create risks?'],
-   ['CloudQuest Agrees to Join a Major Game Platform','CloudQuest Interactive has signed a deal that will bring its games to millions of new users.','The platform will feature CloudQuest games in many countries. The agreement includes payments for player growth.','The company expects a sharp increase in downloads and subscriptions. Investors responded strongly to the wider access.','CloudQuest must keep its servers reliable when many new players arrive.','What could happen if the service cannot handle the growth?'],
-   ['WonderSnack Lands a National Supermarket Deal','WonderSnack Foods will place its products in hundreds of supermarkets.','The agreement gives the company access to far more customers than before. Production will increase next month.','Investors believe the deal could greatly lift sales and make the brand much better known.','The company must deliver enough products and keep food quality high.','Would a large distribution deal change your decision?']
-  ],
-  stable:[
-   ['Investors Wait for Company Results','Major companies are preparing sales reports, but no clear market signal has arrived.','BrightBot AI, PixelForge Games and SunSpark Energy will report new results soon. Investors want to know whether recent products are selling well.','Some traders bought shares while others sold and waited. These actions mostly balanced each other.','Prices may continue to move within a small range until stronger information appears.','Is waiting sometimes a useful investment decision?'],
-   ['Good News and Higher Costs Balance Out','Several companies reported better sales, but their costs also increased.','WonderSnack sold more products while paying more for transport. SwiftStep gained customers but spent more on advertising.','Investors cannot yet tell whether higher income will create higher profit. Buying and selling remained balanced.','The market has no strong direction because the news points both ways.','Which is more important: sales or profit?'],
-   ['Technology Market Has a Quiet Week','Technology companies released small updates but no major products.','BrightBot improved its robot software, and NovaMind added a reading feature. Neither company announced a large contract.','Investors welcomed the improvements but did not make large moves. Share prices changed only slightly.','The next product or sales report may provide a clearer direction.','What kind of news could move the market?'],
-   ['Retail Sales Stay Close to Last Month','Consumer companies reported sales that were almost unchanged.','SwiftStep sold more school shoes but fewer sports shoes. WonderSnack gained customers in one city and lost some in another.','The mixed results gave investors little reason to change their plans.','The market remains watchful rather than strongly positive or negative.','Would stable sales encourage you to invest?'],
-   ['Energy Companies Pause Before New Projects','Clean-energy businesses are studying new projects but have not made final decisions.','SunSpark and GreenGrid both completed small tests. The results were acceptable, but large construction plans are still being reviewed.','Investors are waiting for confirmed contracts before moving more money.','Prices may move by small amounts while decisions are delayed.','Why is a confirmed contract stronger than a plan?'],
-   ['Game Companies Trade Wins and Losses','One game gained players while another lost monthly subscribers.','PixelForge reported better downloads, but CloudQuest faced strong competition. The two results affected gaming shares in opposite directions.','Investors are waiting to see whether new updates change player numbers.','The overall share market signal remains balanced.','Can one company’s success repair another company’s loss?'],
-   ['Factories Keep Production at Normal Levels','Large companies have not increased or reduced production this week.','Orders are steady, and factories are using their normal work schedules. Material costs have also changed very little.','Investors see few surprises in the latest business information.','Without a strong event, share prices may stay within a narrow range.','Would a quiet market change your risk plan?'],
-   ['Investors Study the Next Budget','Businesses are waiting to see whether new government spending will help their industries.','Technology, energy and building companies may all be affected by the next budget. No details have been confirmed.','Some investors are preparing to buy, while others prefer to wait.','The market is likely to remain calm until the announcement.','Should investors act before information is confirmed?']
-  ],
-  smallFall:[
-   ['RoboLearn Delays a New Product','RoboLearn Labs has delayed its newest learning robot by six weeks.','Engineers need more time to improve the robot’s voice system. The company says the problem can be fixed.','Some schools may wait, while others could choose a competing product. Investors became slightly more cautious.','The delay creates pressure, but the product has not been cancelled.','Would a short delay stop you from investing?'],
-   ['PixelForge Sales Miss a Small Target','PixelForge Games sold fewer copies than expected this month.','The difference was not huge, but the company had spent heavily on advertising. Managers now plan smaller promotions.','Investors are concerned that player interest may be slowing. A future update could improve sales.','Gaming shares may face a modest decline while the company adjusts.','Would you wait for the next update?'],
-   ['SunSpark Pays More for Battery Materials','The cost of important battery materials has increased.','SunSpark Energy can still build its products, but each battery now costs more to make. The company may earn less profit.','Managers are looking for new suppliers and better designs. Investors reacted carefully rather than with panic.','The cost problem may create a small downward pressure.','Can finding a new supplier solve the problem?'],
-   ['SwiftStep Loses a Retail Partner','One large shop group will carry fewer SwiftStep shoes next season.','The retailer said customers are asking for different styles. SwiftStep still sells through many other shops.','The company plans a new design, but it will take time to reach stores. Investors expect a small sales impact.','The problem is real but limited to one retail partner.','How serious is losing one customer?'],
-   ['WonderSnack Transport Costs Rise','WonderSnack Foods is paying more to move products between cities.','Sales remain steady, but higher transport bills reduce the money the company keeps. Managers are changing delivery routes.','Investors want to see whether the new routes lower costs.','Until then, the company may face a mild decline in confidence.','Would steady sales protect the company?'],
-   ['NovaMind AI Loses Some Subscribers','A small number of families cancelled NovaMind AI subscriptions after a price increase.','The company still has many users, but growth slowed this month. NovaMind plans a cheaper student option.','Investors are watching whether the new plan brings users back.','The news creates a cautious, slightly weaker outlook.','Could a lower price improve total income?'],
-   ['CloudQuest Server Problems Annoy Players','CloudQuest Interactive had several short service outages.','Players could not enter some games during busy evening hours. The company says new servers will arrive soon.','A few subscribers cancelled, and investors became more careful.','The problem appears fixable, but trust may take time to rebuild.','Would you wait until the new servers work?'],
-   ['GreenGrid Project Starts Later Than Planned','A GreenGrid solar project has been delayed by wet weather.','The project is still approved, but construction will begin several weeks late. Some income will also arrive later.','Investors see a temporary problem rather than a failed project.','The delay may cause a small fall while the market waits.','Does a delay matter if the project still continues?']
-  ],
-  largeFall:[
-   ['BrightBot Stops Robot Sales After a Safety Fault','A battery fault has stopped sales of BrightBot AI’s newest robot.','A school reported that one robot became unusually hot while charging. BrightBot asked customers to stop using that model until checks are complete.','The company may need to replace batteries in thousands of robots. Investors are worried about repair costs and damage to the company’s name.','A quick repair could rebuild trust, but a long delay may create major losses.','Would a successful repair change your decision?'],
-   ['PixelForge Cancels Its Biggest New Game','PixelForge Games has cancelled a project after years of expensive development.','The game failed important testing and would have needed much more money to finish. Hundreds of workers will move to other projects.','The cancelled game was expected to bring a large part of next year’s sales. Investors reacted strongly to the loss.','Other PixelForge games still earn money, but rebuilding the plan may take time.','Can the company recover with a different game?'],
-   ['SunSpark Battery Fails a Major Safety Test','A new SunSpark battery failed an independent fire-safety test.','The company has stopped production and must redesign part of the battery. Several customers paused their orders.','Engineers say the problem can be solved, but the delay may be long and expensive. Clean-energy investors are worried.','The company’s older batteries remain available, which may reduce some damage.','Would you invest before a new safety test?'],
-   ['NovaMind AI Loses a Major School Contract','A large school system has ended its NovaMind AI agreement.','The customer said the software did not meet reliability requirements during busy school hours. NovaMind will lose a large source of regular income.','The company plans technical repairs and hopes to win the contract back. Investors are concerned about other customers leaving.','The loss creates a serious challenge even if repairs succeed.','What evidence would you need before investing?'],
-   ['GreenGrid Construction Site Closes','A major GreenGrid solar site has closed after inspectors found structural problems.','Work cannot restart until engineers complete new designs. The project may face months of delay and large repair costs.','The site was expected to produce a significant part of GreenGrid’s future income. Investors responded with strong concern.','Other GreenGrid sites continue to operate, but the closed project is important.','Would several successful sites balance one large failure?'],
-   ['SwiftStep Recalls Thousands of Shoes','SwiftStep Shoes has recalled a popular product after the sole separated during use.','Customers can return the shoes for a refund. The company must inspect factory equipment and replace damaged products.','The recall will cost a large amount and may reduce customer trust. Retailers have removed the shoe from shelves.','A corrected product may return later, but recovery is uncertain.','How important is customer trust to a company?'],
-   ['CloudQuest Suffers a Serious Data Problem','CloudQuest Interactive has closed part of its service after a major data security problem.','The company is contacting users and working with security experts. New subscriptions have been paused.','Repair costs may be high, and some players may leave permanently. Investors are concerned about legal and trust problems.','CloudQuest says no payment details were stored in the affected system, but the investigation continues.','Would you wait for the final investigation report?'],
-   ['WonderSnack Factory Stops Production','WonderSnack Foods has stopped production at its largest factory after contamination was found.','Products from the affected line are being removed from shops. The company must clean the factory and complete safety testing.','The shutdown may reduce sales and create large refund costs. Investors are worried that customers will choose other brands.','Other factories remain open, but the closed site produces many popular products.','Could strong safety action help the company recover?']
-  ]
- }
+/* Pocket Money Master expanded fictional market-news library. */
+const PMM_NEWS_DATA = {
+  "disclaimer": "Simulation News: The companies and events in these reports are fictional and created for this game.",
+  "bonds": {
+    "label": "Government Bonds",
+    "risk": "Low"
+  },
+  "fund": {
+    "label": "Diversified Fund",
+    "risk": "Medium"
+  },
+  "property": {
+    "label": "Property Fund",
+    "risk": "Medium"
+  },
+  "shares": {
+    "label": "Share Market",
+    "risk": "High"
+  },
+  "shareStories": {
+    "smallRise": [
+      [
+        "HarbourLink Wins a Regional Ferry Upgrade",
+        "HarbourLink Engineering has won a medium-sized contract to improve electric ferries in three coastal towns.",
+        "HarbourLink builds control systems for public transport. The new contract will keep one of its factories busy for several months.",
+        "The deal is useful, but it is much smaller than the company's national projects. Higher metal prices may also reduce some of the profit.",
+        "Investors welcomed the confirmed work, although most are waiting to see whether the project stays on budget.",
+        "Does a confirmed medium-sized contract make a company safer?"
+      ],
+      [
+        "Maple Health Opens Two New Clinics",
+        "Maple Health has opened two neighbourhood clinics after demand for its health services increased.",
+        "The clinics offer basic check-ups, online appointments and children's health services. Early bookings are slightly above the company's forecast.",
+        "Opening new clinics creates more income opportunities, but rent, equipment and staff training also cost money.",
+        "Investors see steady progress rather than a major change in the company's future.",
+        "Would early bookings be enough information for you to invest?"
+      ],
+      [
+        "Orbit Parcel Cuts Delivery Times",
+        "Orbit Parcel has introduced new route software that is helping drivers finish deliveries faster.",
+        "The software studies traffic and chooses shorter routes. A four-week trial reduced fuel use and late deliveries.",
+        "The improvement currently covers only two cities, so the company must prove that it works across a larger network.",
+        "Lower operating costs gave investors a modest reason to feel more confident.",
+        "How can lower costs help a company even when sales stay the same?"
+      ],
+      [
+        "BluePeak Water Signs a Council Deal",
+        "BluePeak Water will install smart water meters for a local council.",
+        "The meters can find leaks and help households understand their water use. The council has confirmed the first stage of the project.",
+        "A second and larger stage will depend on the results of the first installation.",
+        "Investors liked the new income, but the small size of the first stage kept expectations reasonable.",
+        "Would you invest before the second stage is approved?"
+      ],
+      [
+        "Luma Studios Finds a New Audience",
+        "Luma Studios has sold its animated science series to a children's streaming service.",
+        "The programme was already popular in Australia, and the new agreement will make it available in two more countries.",
+        "The payment is helpful, but the company must create additional episodes before receiving the full amount.",
+        "The deal provided a small lift to interest in media shares.",
+        "Is reaching a new audience always profitable?"
+      ],
+      [
+        "FreshRoute Reports Better Farm Deliveries",
+        "FreshRoute Logistics delivered more fresh food on time after changing its cold-storage system.",
+        "Supermarkets reported fewer damaged fruit and vegetable deliveries during the trial.",
+        "FreshRoute plans to update more trucks, but buying new equipment will temporarily increase costs.",
+        "Investors responded positively because the service improvement may help the company keep important customers.",
+        "Would better service matter more than the cost of new equipment?"
+      ],
+      [
+        "RedGum Furniture Receives Strong Reviews",
+        "RedGum Furniture's new recycled-wood desk has received good customer reviews.",
+        "The company sold slightly more desks than expected during the first month. Several schools also requested product samples.",
+        "RedGum has not yet received a large school order, and recycled timber supplies can be unpredictable.",
+        "Investors saw a possible path to growth, but not enough evidence for a major rise.",
+        "Would product reviews influence your decision?"
+      ],
+      [
+        "CloudGarden Adds Business Customers",
+        "CloudGarden Software has gained a small group of cafés and shops for its booking service.",
+        "The software helps small businesses manage bookings, staff shifts and customer messages.",
+        "Monthly subscriptions are increasing slowly, while the company continues to spend money on technical support.",
+        "Investors were encouraged by the new customers but remained careful about costs.",
+        "Why are regular subscriptions useful to a company?"
+      ]
+    ],
+    "largeRise": [
+      [
+        "SkyRail Wins a National Train Contract",
+        "SkyRail Systems has won its largest contract to build control equipment for a national rail project.",
+        "The confirmed agreement covers hundreds of trains and will continue for five years.",
+        "SkyRail plans to expand its main factory and hire specialist engineers. The long contract could provide reliable income for several years.",
+        "Investors reacted strongly because the order is much larger than the company's normal work, although delivery delays remain a risk.",
+        "Would a five-year contract change how you judge the company?"
+      ],
+      [
+        "MedNova Announces a Successful Vaccine Trial",
+        "MedNova Research has reported strong results from a major vaccine trial.",
+        "Independent researchers found that the vaccine met its safety and effectiveness targets.",
+        "The company will now apply for approval and has already received early orders from several health providers.",
+        "Investors see the trial as a major breakthrough, but final approval and large-scale production are still required.",
+        "Would you invest before final approval is given?"
+      ],
+      [
+        "TerraChip Reveals a Faster Low-Power Processor",
+        "TerraChip has developed a computer processor that uses less power while completing tasks faster.",
+        "Several laptop makers have signed agreements to test and purchase the new processor.",
+        "The company expects production to rise sharply next year and is expanding its factory.",
+        "Technology investors responded strongly, though manufacturing such a new design may create unexpected problems.",
+        "Can a strong invention succeed if production is difficult?"
+      ],
+      [
+        "Southern Harvest Secures an Export Agreement",
+        "Southern Harvest Foods will supply packaged fruit to a large overseas supermarket group.",
+        "The three-year agreement is worth far more than the company's existing export business.",
+        "Southern Harvest is adding a new packing line and working with more farms to meet the order.",
+        "Investors welcomed the confirmed sales, but weather and shipping problems could still affect delivery.",
+        "How could an export agreement create both growth and risk?"
+      ],
+      [
+        "AquaSafe Technology Stops a Major Water Leak",
+        "AquaSafe's new sensor system helped a city find and repair a serious underground water leak.",
+        "The successful result attracted interest from many other councils. Five cities have now signed agreements to use the system.",
+        "AquaSafe expects sales to rise quickly and plans to train more installation teams.",
+        "Investors reacted strongly to the confirmed contracts, while watching whether the small company can grow fast enough.",
+        "What problems can happen when a small company grows quickly?"
+      ],
+      [
+        "NorthStar Games Breaks Launch Records",
+        "NorthStar Games has reported record worldwide sales for its new cooperative adventure game.",
+        "The game became one of the most downloaded family titles during its first week.",
+        "NorthStar raised its yearly income forecast and announced additional content for the next twelve months.",
+        "Investors rushed to watch gaming shares, although popular games can lose players if updates disappoint them.",
+        "Can one very successful product support a company for years?"
+      ],
+      [
+        "EcoStone Receives Approval for a New Building Material",
+        "EcoStone's fire-resistant recycled building material has passed national safety testing.",
+        "Several construction companies have already placed large orders for upcoming projects.",
+        "The approval opens a much larger market than EcoStone could previously enter.",
+        "Investors expect strong growth, but the company must keep quality consistent while greatly increasing production.",
+        "Why is independent safety approval important?"
+      ],
+      [
+        "Pulse Mobile Buys a Growing Payment Company",
+        "Pulse Mobile has purchased QuickPay, a rapidly growing digital payment business.",
+        "QuickPay is used by thousands of small shops and has gained customers every month.",
+        "Pulse expects the purchase to add new services and regular transaction income to its main business.",
+        "Investors reacted positively to the larger customer network, but combining two companies may be difficult and expensive.",
+        "Does buying another company always create value?"
+      ]
+    ],
+    "stable": [
+      [
+        "Central Bank Decision Leaves Investors Waiting",
+        "Interest rates have been left unchanged, giving the share market no clear new direction.",
+        "Some companies benefit from steady borrowing costs, while banks and property businesses had hoped for a rate change.",
+        "Investors made only small adjustments because the decision was widely expected.",
+        "Attention has now moved to next month's employment and price reports.",
+        "Why might an expected decision have little effect on prices?"
+      ],
+      [
+        "Strong Travel Sales Meet Higher Fuel Costs",
+        "Travel companies sold more tickets, but airlines also paid more for fuel.",
+        "Holiday bookings were stronger than last year. At the same time, fuel and airport costs increased.",
+        "The extra sales and higher costs may mostly cancel each other out.",
+        "Investors are waiting for full profit reports before deciding whether travel shares are improving.",
+        "Are higher sales helpful if costs rise by the same amount?"
+      ],
+      [
+        "Retailers Report Mixed Holiday Results",
+        "Some retailers had a strong holiday season, while others missed their sales targets.",
+        "Toy and sports shops performed well, but homeware and clothing sales were weaker.",
+        "No single result was large enough to guide the whole market.",
+        "Investors are studying which changes may continue after the holiday period.",
+        "Why can one industry contain both winners and losers?"
+      ],
+      [
+        "Technology Companies Prepare Product Events",
+        "Several technology companies have announced presentation dates but revealed few product details.",
+        "Rumours have attracted attention, but the companies have not confirmed prices, features or release dates.",
+        "Some investors bought shares early, while others preferred to wait for evidence.",
+        "The balanced buying and selling kept prices within a narrow range.",
+        "Is a rumour enough reason to invest?"
+      ],
+      [
+        "Australian Dollar Moves Little",
+        "The Australian dollar has stayed close to the same value against major currencies.",
+        "Exporters received no major benefit or disadvantage from currency changes this week.",
+        "Companies that import equipment also faced similar costs to last month.",
+        "With little movement in currency markets, investors focused on company-specific news instead.",
+        "How can currency changes affect businesses?"
+      ],
+      [
+        "Mining Output Rises as Metal Prices Fall",
+        "Mining companies produced more material, but market prices for several metals declined.",
+        "The higher production helped sales volume. Lower selling prices reduced the value of each shipment.",
+        "These two forces produced mixed company forecasts.",
+        "Investors remained cautious while waiting to see which trend becomes stronger.",
+        "Which matters more to a miner: amount sold or sale price?"
+      ],
+      [
+        "New Business Rules Create Winners and Costs",
+        "A new reporting rule may improve customer trust but will cost companies money to introduce.",
+        "Large businesses can prepare new systems quickly, while smaller companies may need outside help.",
+        "Some investors welcome the clearer information. Others are concerned about short-term costs.",
+        "The market response stayed balanced because the rule has both benefits and disadvantages.",
+        "Can a costly rule help a company in the long term?"
+      ],
+      [
+        "Investors Review Company Leadership Changes",
+        "Several companies have appointed new leaders, but their plans are not yet clear.",
+        "The new leaders have strong experience, although none has announced a major strategy change.",
+        "Employees and investors are waiting for details about future products, costs and hiring.",
+        "Without confirmed action, share prices moved only slightly.",
+        "Should investors judge a leader before seeing a plan?"
+      ]
+    ],
+    "smallFall": [
+      [
+        "CoastAir Cancels Some Winter Flights",
+        "CoastAir has cancelled several quiet routes after receiving fewer bookings than expected.",
+        "Most major routes will continue, but the cancellations reduce the airline's winter income.",
+        "The company says the change will also save fuel and staffing costs.",
+        "Investors became slightly more cautious while waiting to see whether summer bookings improve.",
+        "Could cancelling weak routes help the company later?"
+      ],
+      [
+        "RiverBank Faces a Rise in Late Loan Payments",
+        "RiverBank has reported a modest increase in customers paying loans late.",
+        "Most customers are still paying normally, but the bank has set aside more money for possible losses.",
+        "Higher savings income partly balanced the concern.",
+        "Investors treated the report as a warning rather than a major crisis.",
+        "Why does a bank save money for possible loan losses?"
+      ],
+      [
+        "UrbanCart Delays a Warehouse Opening",
+        "UrbanCart's new delivery warehouse will open six weeks later than planned.",
+        "Construction workers found that extra electrical work was required before equipment could be installed.",
+        "The delay will temporarily limit the number of orders UrbanCart can deliver.",
+        "Investors expect a small impact because the warehouse project is still continuing.",
+        "Does a delay matter if the project remains on track overall?"
+      ],
+      [
+        "SilverScreen Loses a Popular Show",
+        "SilverScreen Streaming will lose one of its most-watched programmes when a contract ends.",
+        "The service still has many other programmes, but some customers may cancel after the show leaves.",
+        "SilverScreen is preparing two new series to replace it.",
+        "Investors became cautious because the success of the replacement programmes is uncertain.",
+        "How important can one popular programme be?"
+      ],
+      [
+        "FarmTech Pays More for Imported Parts",
+        "FarmTech Machinery is paying more for computer parts used in its farming equipment.",
+        "The company can continue production, but each machine now costs more to build.",
+        "Managers are negotiating with new suppliers and may change part of the design.",
+        "Investors expect lower profit until the supply problem improves.",
+        "Could changing suppliers create new risks?"
+      ],
+      [
+        "Beacon Education Reports Slower Enrolments",
+        "Beacon Education added fewer online students than forecast this term.",
+        "Most current students remain subscribed, but the company's advertising attracted fewer new families.",
+        "Beacon plans to update its courses and reduce some marketing costs.",
+        "The market treated the result as a small setback rather than a failure.",
+        "Would keeping current customers reduce the concern?"
+      ],
+      [
+        "MetroBuild Loses One Apartment Project",
+        "MetroBuild was not selected for a planned apartment project.",
+        "The company still has several construction contracts, but it had expected this project to begin next year.",
+        "Managers say they will bid for other work and keep current teams employed.",
+        "Investors reduced their expectations slightly because future income is now less certain.",
+        "How much should one lost project affect a large company?"
+      ],
+      [
+        "OceanFresh Recalls One Product Batch",
+        "OceanFresh Foods has recalled one batch of frozen meals after a packaging error.",
+        "The food itself is safe, but some labels show the wrong allergy information.",
+        "The company removed the affected products and will pay for replacement stock.",
+        "Investors are concerned about costs and customer trust, though the recall is limited to one batch.",
+        "Does fast action reduce the damage from a mistake?"
+      ]
+    ],
+    "largeFall": [
+      [
+        "IronVale Mine Closes After a Major Flood",
+        "IronVale Mining has closed its largest site after floodwater damaged roads and equipment.",
+        "Engineers cannot yet say when full production will restart. The mine normally supplies a large part of IronVale's yearly output.",
+        "Repairs, safety checks and lost shipments may cost the company a large amount.",
+        "Investors reacted strongly because the closure affects both current income and future contracts.",
+        "What would you need to know before investing again?"
+      ],
+      [
+        "SecurePay Reports a Serious Data Breach",
+        "SecurePay has shut down part of its payment service after attackers accessed customer records.",
+        "The company is working with security specialists and government investigators. Some business customers have paused their use of the service.",
+        "SecurePay may face repair costs, legal action and damage to customer trust.",
+        "Investors are worried that important clients could move to competitors.",
+        "Can a company rebuild trust after a major data problem?"
+      ],
+      [
+        "AeroQuest Flight Test Ends in Failure",
+        "AeroQuest's new electric aircraft was badly damaged during an unmanned test flight.",
+        "No people were on board, but the aircraft programme has been stopped while engineers investigate.",
+        "The failed model was expected to become the company's main new product. More testing may take many months.",
+        "Investors reacted sharply because development costs are already very high.",
+        "Would one failed test end the whole project?"
+      ],
+      [
+        "CityMart Accounting Errors Reduce Reported Profit",
+        "CityMart has corrected its financial report after finding major accounting errors.",
+        "The company had reported more profit than it actually earned. Independent accountants are reviewing earlier reports.",
+        "Investors are concerned about the reliability of company information and the decisions made by management.",
+        "The lost trust may be as damaging as the lower profit.",
+        "Why is trustworthy information important to investors?"
+      ],
+      [
+        "BioLeaf Loses Approval for Its Main Product",
+        "Health regulators have stopped sales of BioLeaf's most important medicine.",
+        "Inspectors found that one factory did not meet required quality standards.",
+        "The company must repair the factory and prove that production is safe before sales can restart.",
+        "Because the medicine provides much of BioLeaf's income, investors expect a serious financial impact.",
+        "Would approval at a second factory change the situation?"
+      ],
+      [
+        "Global Freight Workers Begin a Long Strike",
+        "Workers at Global Freight's largest shipping centre have begun an open-ended strike.",
+        "Thousands of containers cannot move normally, and major customers are looking for other transport companies.",
+        "Talks between the company and workers have not produced an agreement.",
+        "Investors fear lost contracts, delayed deliveries and high costs if the strike continues.",
+        "How could a worker dispute affect customers?"
+      ],
+      [
+        "HomeCore Faces a Dangerous Appliance Recall",
+        "HomeCore has recalled hundreds of thousands of heaters after several units caught fire.",
+        "Stores have stopped selling the product, and customers are being offered refunds.",
+        "The company must pay replacement costs and complete a full safety investigation.",
+        "Investors are worried about legal claims and long-term damage to the brand.",
+        "What could HomeCore do to regain customer confidence?"
+      ],
+      [
+        "Zenith Media's Merger Is Blocked",
+        "Regulators have blocked Zenith Media's planned merger with a major competitor.",
+        "Zenith had already spent a large amount preparing the deal and expected the merger to reduce costs.",
+        "The company must now develop a new growth plan while paying cancellation and legal expenses.",
+        "Investors reacted strongly because an important part of Zenith's future strategy has failed.",
+        "Can the company grow without the merger?"
+      ]
+    ]
+  }
 };
