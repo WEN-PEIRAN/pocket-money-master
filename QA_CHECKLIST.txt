@@ -1,15 +1,12 @@
-V4.0 CHECKS
+V4.1 CHECKS
 - app.js and news-data.js syntax checked.
-- index.html loads only news-data.js and app.js.
-- Four profile markets exist without investment accounts.
-- New profiles receive controlled random market scenarios.
-- Parent Market Control works before accounts exist.
-- News reads profile markets, not account existence.
-- Same market rate is shared by same-type investment accounts.
-- New investment accounts do not receive earlier market gains/losses.
-- Existing scenarios migrate into profile markets where available.
-- Term Deposit preview and early-close adjustment included.
-- Accounts page fixed lock removed; normal page scroll restored.
-- Header avatar, Savings funding, Savings Add Money, Summary and zoom protection retained.
+- Version labels updated to V4.1.
+- Ten-minute Share Market points stored in profile market data.
+- Live trend chart and recent update list included on Share Market account screen.
+- Sub-cent share changes carried forward until they affect the account balance.
+- One Share Market Daily Settlement generated after market close or day rollover.
+- Buy and Sell records remain separate.
+- Summary Net Investment Result restored.
+- Summary percentage allocation bars restored.
+- V4.0 profile-level markets, News, Term Deposit preview, Savings funding and Parent Market Control retained.
 - Empty image folders included; no images packaged.
-- Profile selection page title and version badge explicitly checked as V4.0.

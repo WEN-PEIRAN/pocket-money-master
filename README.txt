@@ -1,7 +1,7 @@
-POCKET MONEY MASTER - VERSION 4.0 - NO IMAGES
+POCKET MONEY MASTER - VERSION 4.1 - NO IMAGES
 
-V4.0 uses a profile-level market system. Government Bonds, Diversified Fund, Property Fund and Share Market run before investment accounts are opened. News and Parent Market Control read the same market scenarios. New investment accounts join the current market without receiving past gains or losses.
+V4.1 restores the Share Market experience and Summary allocation view. Share Market movement is processed every 10 minutes during the simulated weekday session, stored as a live trend, and displayed with recent ten-minute rates. Recent Transactions receives one Share Market Daily Settlement after market close. Small sub-cent movements are carried forward instead of being discarded.
 
-Term Deposit creation now previews estimated interest, maturity total and maturity date. Early closure shows the interest adjustment and returned amount.
+Summary again shows Net Investment Result and percentage allocation bars for Spending Money, Savings, Term Deposits and Investments.
 
-The Accounts page uses normal vertical scrolling again while retaining account-card swiping. Copy all original images into the empty img subfolders and keep every filename unchanged.
+Copy all original images into the empty img subfolders without changing filenames.
